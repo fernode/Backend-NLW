@@ -36,7 +36,7 @@ export default class ClassesController {
       .join('users', 'classes.user_id', '=', 'users.id')
       .select('classes.*', 'users.*');
 
-    return res.json({ classes });
+    return res.json(classes);
   }
 
   async create(req: Request, res: Response) {
